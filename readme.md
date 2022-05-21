@@ -68,3 +68,11 @@ src
 1. **show all comments (under a post)**
 
 2. **add a comment**
+
+
+# Screenshots
+
+![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot1.png)
+![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot2.png)
+![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot3.png)
+![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot4.png)
