@@ -72,7 +72,7 @@ src
 
 # Screenshots
 
-![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot1.png)
-![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot2.png)
-![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot3.png)
-![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot4.png)
+![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot%201.png)
+![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot%202.png)
+![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot%203.png)
+![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot%204.png)
