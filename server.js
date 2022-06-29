@@ -95,10 +95,7 @@ app.get("/", function (req, res) {
 
 app.get(
   "/auth/google",
-  passport.authenticate("google", { scope: ["profile", "email"] }),
-  function (req, res) {
-    res.send("hello world");
-  }
+  passport.authenticate("google", { scope: ["profile", "email"] })
 );
 
 app.get(
@@ -106,7 +103,7 @@ app.get(
   passport.authenticate("google", { failureRedirect: "/login" }),
   function (req, res) {
     // Successful authentication, redirect to secrets.
-    res.send("hello world");
+    res.redirect("/secrets");
   }
 );
 
