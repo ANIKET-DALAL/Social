@@ -1,7 +1,8 @@
 body {
   min-height: 100vh;
-  background-color: #000000;
-  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  background-color: #eee;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 #navbar {
@@ -20,14 +21,4 @@ body {
 
 span {
   float: right;
-}
-
-.upload {
-  width: 400px;
-  height: auto;
-}
-
-.upload_min {
-  width: auto;
-  height: 100px;
 }

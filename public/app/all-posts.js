@@ -40,7 +40,7 @@ $(async function () {
                     <a href="#" class="card-link like" id="${p._id}" value="${
             p._id
           }">Like</a>
-                    <span class="text-right">${p.likes} likes </span>
+                    <span class="text-right">${p.likes} like(s) </span>
                 </div>
               </div>
             </div>          
@@ -71,6 +71,12 @@ $(async function () {
                 <div class="card-body"> 
                   <p class="card-text">
                     ${p.body.substr(0, 200)} 
+                    <br><br>
+                    ${
+                      p.image
+                        ? `<img class="img-top rounded mx-auto d-block img-fluid upload_min" src="${p.image}" alt="Card image cap">`
+                        : ``
+                    }
                   </p>
                 </div>
                 <div class="card-footer" value="${p._id}">
@@ -80,7 +86,7 @@ $(async function () {
                   <a href="#" class="card-link like" id="${p._id}" value="${
             p._id
           }">Like</a>
-                  <span>${p.likes} likes</span>
+                  <span>${p.likes} like(s)</span>
                 </div>
               </div>
             </div>          
@@ -131,7 +137,7 @@ $(async function () {
                     } ${time} GMT</h6>
                     </div>
                     <br>
-                    <img class="img-top rounded mx-auto d-block img-fluid" src="${
+                    <img class="img-top rounded mx-auto d-block img-fluid upload" src="${
                       p.image
                     }" alt="Card image cap">
                     <div class="card-body">
@@ -146,7 +152,7 @@ $(async function () {
                         <a href="#" class="card-link like" id="${
                           p._id
                         }" value="${p._id}">Like</a>
-                        <h6 class="text-right">${p.likes} likes </h6>
+                        <h6 class="text-right">${p.likes} like(s) </h6>
                       </div>
                   </div>
                 </div>        
@@ -186,7 +192,7 @@ $(async function () {
                         <a href="#" class="card-link like" id="${
                           p._id
                         }" value="${p._id}">Like</a>
-                        <h6 class="text-right">${p.likes} likes </h6>
+                        <h6 class="text-right">${p.likes} like(s) </h6>
                       </div>
                   </div>
                 </div>        
@@ -195,6 +201,15 @@ $(async function () {
           }
         }
       }
+      $(".card-link.like").click(async function () {
+        let user_id = $("#id").text();
+        let pId = this.id;
+        await $.post(`/api/posts/${pId}`, { userId: user_id }, (error) => {
+          if (error) {
+            window.alert("Already liked");
+          } else window.alert("Post Liked! Refresh to view changes");
+        });
+      });
     });
     $(".card-link.comment").click(async function () {
       $(`#posts-container`).empty();
