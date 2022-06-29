@@ -17,17 +17,17 @@ src
 ```shell
 src
 ├──public
-│    ├── app                                     # our own frontend js code
+│    ├── app                                     # frontend js code
 │    │   └── common.js
-│    ├── components                              # own own html snippets
+│    ├── components                              # html snippets
 │    │   └── navbar.html
-│    ├── css                                     # css libraries we are using
+│    ├── css                                     # css libraries
 │    │   └── bootstrap.css
-│    ├── fonts                                   # fonts that we are using
+│    ├── fonts                                   # fonts
 │    │   ├── Muli-Italic.woff2
 │    │   ├── Muli.woff2
 │    │   └── muli.css
-│    └── js                                      # │js libraries we are using
+│    └── js                                      # js libraries
 │        ├── bootstrap.js
 │        ├── jquery-3.4.1.js
 │        └── popper.js
@@ -62,6 +62,8 @@ src
    we should be user id/ username
 
 4. **like posts**
+
+5. **Delete post**
 
 ### Comments
 
