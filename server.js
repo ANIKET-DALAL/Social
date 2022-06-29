@@ -95,7 +95,10 @@ app.get("/", function (req, res) {
 
 app.get(
   "/auth/google",
-  passport.authenticate("google", { scope: ["profile", "email"] })
+  passport.authenticate("google", { scope: ["profile", "email"] }),
+  function (req, res) {
+    res.send("hello world");
+  }
 );
 
 app.get(
