@@ -36,8 +36,6 @@ src
      └── start.hbs                               # first / home page
 ```
 
-## Business Logic
-
 ### Users
 
 1. **users**
@@ -45,31 +43,31 @@ src
 
 ### Posts
 
-1. **create post**
+1. **Create post**
    this will create a new post, required fields are
 
    - username (the author of this post)
    - title
    - body
 
-2. **show all posts**
+2. **Show all posts**
    list all existing posts, we should have following filtering support
 
    - filter by username
    - filter by query contained in title (search by title)
 
-3. **show all posts of a specific user**
+3. **Show all posts of a specific user**
    we should be user id/ username
 
-4. **like posts**
+4. **Like posts**
 
 5. **Delete post**
 
 ### Comments
 
-1. **show all comments (under a post)**
+1. **Show all comments (under a post)**
 
-2. **add a comment**
+2. **Add a comment**
 
 
 # Screenshots
