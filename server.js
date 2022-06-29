@@ -99,7 +99,7 @@ app.get(
 );
 
 app.get(
-  "/auth/google/secrets",
+  "https://enigmatic-wave-77077.herokuapp.com/auth/google/secrets",
   passport.authenticate("google", { failureRedirect: "/login" }),
   function (req, res) {
     // Successful authentication, redirect to secrets.
