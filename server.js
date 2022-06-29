@@ -208,9 +208,14 @@ app.post("/login", function (req, res) {
 
 let db = mongoose.connection;
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
 if (db) {
-  app.listen(3000, () => {
-    console.log("server started on port http://localhost:3000");
+  app.listen(port, () => {
+    console.log("server started successfully");
   });
 } else {
   console.log("error connecting db");

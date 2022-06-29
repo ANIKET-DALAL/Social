@@ -1,55 +1,59 @@
-const mongoose = require('mongoose');
-const passportLocalMongoose = require('passport-local-mongoose');
-const findOrCreate = require('mongoose-findorcreate')
-const moment = require('moment-timezone');
+const mongoose = require("mongoose");
+const passportLocalMongoose = require("passport-local-mongoose");
+const findOrCreate = require("mongoose-findorcreate");
+const moment = require("moment-timezone");
 const dateIndia = moment.tz(Date.now(), "Asia/Kolkata");
 
-mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(
+  "mongodb+srv://admin_aniket:test_123@cluster0.mq2o8.mongodb.net/SocialDB",
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
 mongoose.set("useCreateIndex", true);
-mongoose.set('useFindAndModify', false);
+mongoose.set("useFindAndModify", false);
 
-const userSchema = new mongoose.Schema ({
-    username: String,
-    email: String,
-    profilePic: String,
-    password: String,
-    googleId: String,
-    facebookId: String
+const userSchema = new mongoose.Schema({
+  username: String,
+  email: String,
+  profilePic: String,
+  password: String,
+  googleId: String,
+  facebookId: String,
 });
 
 userSchema.plugin(passportLocalMongoose);
 userSchema.plugin(findOrCreate);
 
-
-const postSchema = new mongoose.Schema ({
+const postSchema = new mongoose.Schema(
+  {
     title: String,
     body: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     image: String,
     likes: {
-        type: Number,
-        default: 0
+      type: Number,
+      default: 0,
     },
-    liked_by: [{type: mongoose.Schema.Types.ObjectId}],
-    user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
-    }, {
-        timestamps: true
-    }
-)
+    liked_by: [{ type: mongoose.Schema.Types.ObjectId }],
+    user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-const commentSchema = new mongoose.Schema ({
-    body: {
-        type: String,
-        required: true
-    },
-    user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-    post: {type: mongoose.Schema.Types.ObjectId, ref: 'Post'}
-})
+const commentSchema = new mongoose.Schema({
+  body: {
+    type: String,
+    required: true,
+  },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  post: { type: mongoose.Schema.Types.ObjectId, ref: "Post" },
+});
 
 const User = new mongoose.model("User", userSchema);
 const Post = new mongoose.model("Post", postSchema);
 const Comment = new mongoose.model("Comment", commentSchema);
 
-module.exports = {User, Post, Comment}
+module.exports = { User, Post, Comment };
