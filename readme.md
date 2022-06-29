@@ -17,17 +17,17 @@ src
 ```shell
 src
 ├──public
-│    ├── app                                     # our own frontend js code
+│    ├── app                                     # frontend js code
 │    │   └── common.js
-│    ├── components                              # own own html snippets
+│    ├── components                              # html snippets
 │    │   └── navbar.html
-│    ├── css                                     # css libraries we are using
+│    ├── css                                     # css libraries
 │    │   └── bootstrap.css
-│    ├── fonts                                   # fonts that we are using
+│    ├── fonts                                   # fonts
 │    │   ├── Muli-Italic.woff2
 │    │   ├── Muli.woff2
 │    │   └── muli.css
-│    └── js                                      # │js libraries we are using
+│    └── js                                      # js libraries
 │        ├── bootstrap.js
 │        ├── jquery-3.4.1.js
 │        └── popper.js
@@ -63,8 +63,18 @@ src
 
 4. **like posts**
 
+5. **Delete post**
+
 ### Comments
 
 1. **show all comments (under a post)**
 
 2. **add a comment**
+
+
+# Screenshots
+
+![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot%201.png)
+![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot%202.png)
+![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot%203.png)
+![alt text](https://github.com/ANIKET-DALAL/social/blob/main/images/Screenshot%204.png)
