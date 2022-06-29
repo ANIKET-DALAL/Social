@@ -38,7 +38,7 @@ src
 
 ### Users
 
-1. **users**
+1. **Users**
    can login with google.
 
 ### Posts
@@ -68,7 +68,6 @@ src
 1. **Show all comments (under a post)**
 
 2. **Add a comment**
-
 
 # Screenshots
 
