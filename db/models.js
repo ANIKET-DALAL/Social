@@ -4,10 +4,10 @@ const findOrCreate = require("mongoose-findorcreate");
 const moment = require("moment-timezone");
 const dateIndia = moment.tz(Date.now(), "Asia/Kolkata");
 
-mongoose.connect(
-  "mongodb+srv://admin_aniket:test_123@cluster0.mq2o8.mongodb.net/SocialDB",
-  { useNewUrlParser: true, useUnifiedTopology: true }
-);
+mongoose.connect(process.env.DATABASE_LINK, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 mongoose.set("useCreateIndex", true);
 mongoose.set("useFindAndModify", false);
 
