@@ -52,7 +52,7 @@ passport.use(
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
       callbackURL:
-        "https://talented-dove-outfit.cyclic.app/auth/google/secrets",
+        "https://stormy-calf-buckle.cyclic.app/auth/google/secrets",
       userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
     function (accessToken, refreshToken, profile, cb) {
@@ -76,7 +76,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID_FB,
       clientSecret: process.env.CLIENT_SECRET_FB,
-      callbackURL: "http://localhost:3000/auth/facebook/secrets",
+      callbackURL: "https://stormy-calf-buckle.cyclic.app/auth/facebook/secrets",
     },
     function (accessToken, refreshToken, profile, done) {
       User.findOrCreate({ facebookId: profile.id }, function (err, user) {
